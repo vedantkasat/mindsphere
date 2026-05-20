@@ -68,7 +68,7 @@ jobs:
         with:
           name: MindSphere-macOS
           path: dist/MindSphere-macos.dmg
-    release:
+  release:
     needs: [build-windows, build-macos]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
@@ -93,4 +93,4 @@ jobs:
             - macOS: MindSphere-macos.dmg
             - Windows: MindSphere-windows.zip
 
-            First run: paste your free Gemini API key from aistudio.google.com/apikey      
+            First run: paste your free Gemini API key from aistudio.google.com/apikey        
