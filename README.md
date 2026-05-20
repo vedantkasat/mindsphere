@@ -102,7 +102,7 @@ This app is **not** a substitute for professional help. If you're struggling, pl
 
 ## Author
 
-Built by **Vedant Kasat & Vaishnav Shinde** — 3rd-year E&TC student at AISSMS IOIT, Pune.
+Built by **Vedant Kasat and Vaishnav Shinde** — 3rd-year E&TC student at AISSMS IOIT, Pune.
 
 ## License
 
