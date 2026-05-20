@@ -76,7 +76,7 @@ coll = COLLECT(
 app = BUNDLE(
     coll,
     name='MindSphere.app',
-    icon='installer/assets/icon.icns',
+    icon='assets/icon.icns',
     bundle_identifier='com.vedantkasat.mindsphere',
     info_plist={
         'CFBundleName': 'MindSphere',
