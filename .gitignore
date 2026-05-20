@@ -1,0 +1,28 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Env (NEVER commit your API key)
+.env
+
+# Database (NEVER commit personal data)
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
+
+dist/
+build/
+*.dmg
+*.spec.bak

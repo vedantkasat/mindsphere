@@ -1,0 +1,81 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindSphere — Your private space</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">🧠 MindSphere</div>
+    <div class="nav-links">
+      <a href="/chat.html">Chat</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/mood.html">Mood</a>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <h1>A private space for your head.</h1>
+    <p class="subtitle">
+      A mental wellness companion built for Indian college students.
+      Your data stays on your device. Nothing tracks you. Nothing judges you.
+    </p>
+
+    <div class="cta-row">
+      <a href="/chat.html" class="btn btn-primary">Start talking</a>
+      <a href="/journal.html" class="btn btn-ghost">Write something</a>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <h3>AI Companion</h3>
+        <p>Talk through stress, placements, family pressure — anything. Crisis-aware, India-aware.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📓</div>
+        <h3>Reflective Journal</h3>
+        <p>Write freely. Get a gentle reflection on sentiment and themes. Nothing leaves your device unless you ask.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Mood Tracker</h3>
+        <p>Log how you feel daily. See your patterns over time. Spot what's helping and what's not.</p>
+      </div>
+    </div>
+
+    <div class="privacy-note">
+      <strong>Privacy by default:</strong> No account. No email. No tracking.
+      Sensitive info is stripped before any AI call.
+      <button id="wipeBtn" class="wipe-btn">Wipe all my data</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Built with care. Not a substitute for professional help.</p>
+    <p class="helplines">
+      Crisis? Tele Manas <a href="tel:18008914416">1-800-891-4416</a> ·
+      Vandrevala <a href="tel:18602662345">1860-2662-345</a> ·
+      iCall <a href="tel:9152987821">9152987821</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("wipeBtn").addEventListener("click", async () => {
+      const ok = confirm(
+        "This will permanently delete ALL your chat history, journal entries, and mood logs. This can't be undone.\n\nContinue?"
+      );
+      if (!ok) return;
+      try {
+        const res = await fetch("/api/wipe", { method: "DELETE" });
+        const data = await res.json();
+        alert("Done. Everything has been wiped clean.");
+      } catch (e) {
+        alert("Couldn't wipe data. Check your connection.");
+      }
+    });
+  </script>
+</body>
+</html>

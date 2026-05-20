@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat — MindSphere</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <link rel="stylesheet" href="/static/css/chat.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo"><a href="/" style="color:inherit;text-decoration:none;">🧠 MindSphere</a></div>
+    <div class="nav-links">
+      <a href="/chat.html" class="active">Chat</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/mood.html">Mood</a>
+    </div>
+  </nav>
+
+  <main class="chat-page">
+    <header class="chat-header">
+      <div>
+        <h2>Chat</h2>
+        <p class="page-subtitle">A space to think out loud. No judgement.</p>
+      </div>
+      <div class="chat-controls">
+        <label class="toggle">
+          <input type="checkbox" id="ephemeralToggle" />
+          <span>Ephemeral</span>
+        </label>
+        <button id="clearBtn" class="btn-icon" title="Clear chat">🗑️</button>
+      </div>
+    </header>
+
+    <div id="messages" class="messages">
+      <div class="msg msg-assistant">
+        <div class="bubble">
+          Hey. I'm here whenever you want to talk — about anything. What's on your mind?
+        </div>
+      </div>
+    </div>
+
+    <div id="typing" class="typing hidden">
+      <span></span><span></span><span></span>
+    </div>
+
+    <form id="chatForm" class="chat-input-row">
+      <textarea
+        id="userInput"
+        placeholder="Type what's on your mind... (Enter to send, Shift+Enter for new line)"
+        rows="1"
+        autocomplete="off"
+        required
+      ></textarea>
+      <button type="submit" class="btn btn-primary send-btn">Send</button>
+    </form>
+
+    <p class="footer-note">
+      Ephemeral mode: nothing is saved to disk for this session.<br />
+      If you're in crisis: Tele Manas 1-800-891-4416 · Vandrevala 1860-2662-345 · iCall 9152987821
+    </p>
+  </main>
+
+  <script src="/static/js/chat.js"></script>
+</body>
+</html>
